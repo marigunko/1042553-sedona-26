@@ -8,7 +8,7 @@
     <header>
       <nav>
           <a>
-            <img src="img/logo.svg" width="115" height="41" alt="Логотип «Седона»">
+            <img src="img/icons/logo.svg" width="115" height="41" alt="Логотип «Седона»">
           </a>
         <ul>
           <li><a href="#">ИНФОРМАЦИЯ</a></li>
@@ -19,45 +19,78 @@
       </nav>
     </header>
     <main>
-      <img src="img/background-photo.jpg" width="1200" height="773" alt="Фоновое изображение">
-      <img src="polygon.svg" width="1201" height="59">
-        <p>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</p>
-        <p>РАССМОТРИМ ПЯТЬ ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>
-<!-- Здесь будет блок -->
+      <img class="background-image" src="img/background-photo.jpg" width="1200" height="773" alt="Фоновое изображение">
+      <img class="background-image" src="img/icons/polygon.svg" width="1201" height="59">
+      <p>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</p><!--Здесь текст не капсом надо прописывать, а что-то потом написать в css?-->
+      <p>РАССМОТРИМ ПЯТЬ ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>
+      <section>
+        <p>Настоящий городок</p><!--Тут параграфам применятся классы, но пока думаю как разграничить и назвать т_т -->
+        <p> — №1 — </p>
+        <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        <img src="img/feature-picture.jpg" width="800" height="256" alt="Настоящий городок">
+      </section>
+      <section>
+        <img src="img/icons/icon-1-house.jpg" width="75" height="72"><!--Нужно ли для таких картинок делать alt? Они вроде как не важны-->
+        <h2>Жильё</h2>
+        <h3>Рекомендуем пожить в настоящем мотеле, всё как в кино!</h3>
+        <img src="img/icons/icon-2-burger.jpg" width="75" height="72">
+        <h2>Еда</h2>
+        <h3>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</h3>
+        <img src="img/icons/icon-3-present.jpg" width="75" height="72">
+        <h2>Сувениры</h2>
+        <h3>Не только китайского, но и местного производства!</h3>
+      </section>
+      <section>
+        <p>Там есть<br>
+        Мост дьявола</p>
+        <p> — №2 — </p>
+        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <img src="img/layer-5.jpg" width="800" height="256" alt="Мост Дьявола">
+      </section>
+      <section>
+        <h2>Небольшая площадь</h2>
+        <p> — №3 — </p>
+        <h3>Все достопримечательности находятся очень близко</h3>
+        <h2>Красивая дорога</h2>
+        <p> — №4 — </p>
+        <h3>Ехать в Седону из Лас-Вегаса совсем не скучно!</h3>
+        <h2>Мало туристов</h2>
+        <p> — №5 — </p>
+        <h3> Большинство едет в гранд каньон и толпится там</h3>
+      </section>
         <p>ЗАИНТЕРЕСОВАЛИСЬ?</p>
         <p>УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ,<br>
         И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>
-        <section>
-          <h2>ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2>
-<!-- Здесь будет форма -->
-        </section>
+      <section>
+        <!-- Здесь будет форма -->
+        <img src="img/map.jpg" width="1200" height="594" alt="Карта">
+      </section>
     </main>
     <footer>
       <p>#VISITSEDONA</p>
-        <div>
-        <p>Давайте дружить!</p>
-          <ul>
-            <li>
-              <a href="#">
-                <img src="tw-icon.svg" width="17" height="15" alt="Твиттер">
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="fb-icon.svg" width="17" height="15" alt="Фейсбук">
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="youtube-icon.svg" width="17" height="15" alt="Ютуб">
-              </a>
-            </li>
-          </ul>
+      <div>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="img/icons/tw-icon.svg" width="17" height="15" alt="Твиттер">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icons/fb-icon.svg" width="17" height="15" alt="Фейсбук">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icons/youtube-icon.svg" width="17" height="15" alt="Ютуб">
+            </a>
+          </li>
+        </ul>
       </div>
       <p>
         <span>WEBSITE BY</span>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="logo-htmla.svg" width="17" height="15" alt="Логотип HTML Академии">
+          <img src="img/icons/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Академии">
         </a>
       </p>
     </footer>
