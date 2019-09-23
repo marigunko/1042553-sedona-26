@@ -11,18 +11,19 @@
             <img src="img/icons/logo.svg" width="115" height="41" alt="Логотип «Седона»">
           </a>
         <ul>
-          <li><a href="#">ИНФОРМАЦИЯ</a></li>
-          <li><a href="#">ФОТО И ВИДЕО</a></li>
-          <li><a href="#">КАРТА ШТАТА</a></li>
-          <li><a href="#">ГОСТИНИЦЫ</a></li>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="#">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <img class="background-image" src="img/background-photo.jpg" width="1200" height="773" alt="Фоновое изображение">
       <img class="background-image" src="img/icons/polygon.svg" width="1201" height="59">
-      <p>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</p><!--Здесь текст не капсом надо прописывать, а что-то потом написать в css?-->
-      <p>РАССМОТРИМ ПЯТЬ ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>
+      <img src="img/icons/intro-welcome.svg">
+      <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       <section>
         <p>Настоящий городок</p><!--Тут параграфам применятся классы, но пока думаю как разграничить и назвать т_т -->
         <p> — №1 — </p>
@@ -30,7 +31,7 @@
         <img src="img/feature-picture.jpg" width="800" height="256" alt="Настоящий городок">
       </section>
       <section>
-        <img src="img/icons/icon-1-house.jpg" width="75" height="72"><!--Нужно ли для таких картинок делать alt? Они вроде как не важны-->
+        <img src="img/icons/icon-1-house.jpg" width="75" height="72">
         <h2>Жильё</h2>
         <h3>Рекомендуем пожить в настоящем мотеле, всё как в кино!</h3>
         <img src="img/icons/icon-2-burger.jpg" width="75" height="72">
@@ -58,12 +59,29 @@
         <p> — №5 — </p>
         <h3> Большинство едет в гранд каньон и толпится там</h3>
       </section>
-        <p>ЗАИНТЕРЕСОВАЛИСЬ?</p>
-        <p>УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ,<br>
-        И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>
-      <section>
-        <!-- Здесь будет форма -->
+        <p>Заинтересовались?</p>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <section><!--Пока что сделала только форму ниже на основе барбершопа-->
+        <h2>Поиск гостиницы в Седоне</h2>
         <img src="img/map.jpg" width="1200" height="594" alt="Карта">
+          <p>
+            <label for="check-in-date">Дата заезда:</label>
+            <input id="check-in-date" type="text" name="date" value="" placeholder="24.04.2017">
+          </p>
+          <p>
+            <label for="check-out-date">Дата выезда:</label>
+            <input id="check-out-date" type="text" name="date" value="" placeholder="04.07.2017">
+          </p>
+          <p>
+            <label for="adults">Взрослые:</label>
+            <input id="adults" type="count" name="number" value="" placeholder="2">
+          </p>
+          <p>
+            <label for="children">Дети:</label>
+            <input id="children" type="count" name="number" value="" placeholder="0">
+          </p>
+          <button type="submit">Найти</button>
+        </form>
       </section>
     </main>
     <footer>
@@ -88,7 +106,7 @@
         </ul>
       </div>
       <p>
-        <span>WEBSITE BY</span>
+        <span>Website by</span>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/icons/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Академии">
         </a>
