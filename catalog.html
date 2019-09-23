@@ -20,49 +20,83 @@
     </header>
     <main>
       <img class="background-image" src="img/filter-background.jpg" width="1200" height="800" alt="Фоновое изображение">
-      <!--Здесь будет навигационная цепочка-->
-          <section>
-            <ul>
-              <li>
-                <a>
-                  <img src="img/hotel-picture.jpg" width="135" height="90" alt="Гостиница AMARA RESORT & SPA">
-                </a>
-                <div>Гостиница</div>
-                <div>ОТ 4000 Р.</div>
-                <p>
-                  <a href="#">Подробнее</a>
-                  <a href="#">Забронировать</a>
-                </p>
-                <img src="img/icons/star.svg" width="18" height="17"><!--Нужно вставить несколько одинаковых изображений подряд(звёздочки рейтинга)-->
-                <span>Рейтинг: 8,5</span>
-              </li>
-              <li>
-                <a>
-                  <img src="img/motel-picture.jpg" width="135" height="90" alt="Мотель DESERT QUAIL INN">
-                </a>
-                <div>Мотель</div>
-                <div>ОТ 3000 Р.</div>
-                <p>
-                  <a href="#">Подробнее</a>
-                  <a href="#">Забронировать</a>
-                </p>
-                <img src="img/icons/star.svg" width="18" height="17">
-                <span>Рейтинг: 8,9</span>
-              </li>
-              <li>
-                <a>
-                  <img src="img/apartment-picture.jpg"  width="135" height="90" alt="Аппартаменты VILLAS AT POCO DIABLO">
-                </a>
-                <div>Аппартаменты</div>
-                <div>ОТ 2000 Р.</div>
-                <p>
-                  <a href="#">Подробнее</a>
-                  <a href="#">Забронировать</a>
-                </p>
-                <img src="img/icons/star.svg" width="18" height="17">
-                <span>Рейтинг: 9,2</span>
-              </li>
-            </ul>
+      <fieldset>
+        <legend>Инфраструктура:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="swimming-pool" id="swimming-pool" checked>
+            <label for="swimming-pool">Бассеин</label>
+          </li>
+          <li>
+            <input type="checkbox" name="parking" id="fparking">
+            <label for="parking">Парковка</label>
+          </li>
+          <li>
+            <input type="checkbox" name="wi-fi" id="wi-fi">
+            <label for="wi-fi">Wi-Fi</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Тип жилья:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="hotel">Гостиница</label>
+          </li>
+          <li>
+            <input type="checkbox" name="motel" id="motel" checked>
+            <label for="motel">Мотель</label>
+          </li>
+          <li>
+            <input type="checkbox" name="appartments" id="appartments" checked>
+            <label for="appartments">Аппартаменты</label>
+          </li>
+        </ul>
+      </fieldset>
+      <!--Стоимость в сутки-->
+        <section>
+          <ul>
+            <li>
+              <a>
+                <img src="img/hotel-picture.jpg" width="135" height="90" alt="Гостиница AMARA RESORT & SPA">
+              </a>
+              <div>Гостиница</div>
+              <div>ОТ 4000 Р.</div>
+              <p>
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </p>
+              <img src="img/icons/star.svg" width="18" height="17"><!--Нужно вставить несколько одинаковых изображений подряд(звёздочки рейтинга)-->
+              <span>Рейтинг: 8,5</span>
+            </li>
+            <li>
+              <a>
+              <img src="img/motel-picture.jpg" width="135" height="90" alt="Мотель DESERT QUAIL INN">
+              </a>
+              <div>Мотель</div>
+              <div>ОТ 3000 Р.</div>
+              <p>
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </p>
+              <img src="img/icons/star.svg" width="18" height="17">
+              <span>Рейтинг: 8,9</span>
+            </li>
+            <li>
+              <a>
+                <img src="img/apartment-picture.jpg"  width="135" height="90" alt="Аппартаменты VILLAS AT POCO DIABLO">
+              </a>
+              <div>Аппартаменты</div>
+              <div>ОТ 2000 Р.</div>
+              <p>
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+              </p>
+              <img src="img/icons/star.svg" width="18" height="17">
+              <span>Рейтинг: 9,2</span>
+            </li>
+          </ul>
         </section>
       </main>
       <footer>
