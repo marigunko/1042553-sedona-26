@@ -57,27 +57,33 @@
         <button type="submit">Показать</button>
       </form>
       <div class="search">
+        <h2 class="visually-hidden">Сортировка результатов</h2>
         <p>Найдено: 3</p>
         <section>
-          <h2>Сортировка:</h2>
-          <h3>по цене</h3>
-          <h3>по типу</h3>
-          <h3>по рейтингу</h3>
+          <ul>
+            <p>Сортировка:</p><!--Валидатор ругается на этот тег-->
+            <li><a href="#">по цене</a></li>
+            <li><a href="#">по типу</a></li>
+            <li><a href="#">по рейтингу</a></li>
+          </ul>
+        </section>
+        <section>
           <ul>
             <li>
-              <a aria-label="Сортировка по возрастанию/убыванию"></a>
-              <button><img src="img/icons/icon-up-dir.svg" width="11" height="10"></button>
+              <a aria-label="Сортировка по возрастанию"></a>
+              <a href="#"><img src="img/icons/icon-up-dir.svg" width="11" height="10"></a>
             </li>
           </ul>
           <ul>
             <li>
-              <a aria-label="Сортировка по возрастанию/убыванию"></a>
-              <button><img src="img/icons/icon-down-dir.svg" width="11" height="10"></button>
+              <a aria-label="Сортировка по убыванию"></a>
+              <a href="#"><img src="img/icons/icon-down-dir.svg" width="11" height="10"></a>
             </li>
           </ul>
         </section>
       </div>
       <section>
+        <h2 class="visually-hidden">Результаты поиска</h2>
         <ul>
           <li>
             <img src="img/hotel-picture.jpg"  width="135" height="90" alt="Гостиница AMARA RESORT & SPA">
@@ -110,7 +116,7 @@
             <p>Рейтинг: 8,9</p>
           </li>
           <li>
-            <img src="img/apartment-picture.jpg"  width="135" height="90" alt="Аппартаменты VILLAS AT POCO DIABLO">
+            <img src="img/apartment-picture.jpg" width="135" height="90" alt="Аппартаменты VILLAS AT POCO DIABLO">
             <a href="#">
               <h3>Villas At Poco Diablo</h3>
             </a>
