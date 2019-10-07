@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Поиск жилья в Седоне</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -22,19 +21,23 @@
       </nav>
     </header>
     <main class="container">
-      <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
-      <img src="img/icons/intro-welcome.svg" width="459" height="353" alt="Добро пожаловать в великолепную Седону">
-      <h3>Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <section class="intro">
+        <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
+        <img src="img/icons/intro-welcome.svg" width="459" height="353" alt="Добро пожаловать в великолепную Седону">
+        <div class="about">
+          <h3>Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        </div>
+      </section>
       <section class="reasons">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
-        <div>
-          <section class="reason-item">
+        <div class="background-blue">
+          <section class="reason-item-text">
             <h3>Настоящий городок</h3>
             <p>— №1 —</p>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </section>
-          <div>
+          <div class="reason-image-wrapper">
             <img src="img/feature-picture.jpg" width="800" height="256" alt="Настоящий городок">
           </div>
         </div>
@@ -54,13 +57,13 @@
             </li>
           </ul>
         </div>
-        <div>
-          <section class="reason-item">
+        <div class="background-blue">
+          <section class="reason-item-text">
             <h3>Там есть мост Дьявола</h3>
             <p>— №2 —</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </section>
-          <div>
+          <div class="reason-image-wrapper">
             <img src="img/layer-5.jpg" width="800" height="256" alt="Мост Дьявола">
           </div>
         </div>
@@ -87,34 +90,35 @@
       <section class="search">
         <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
         <p class="search-title">Заинтересовались?</p>
-        <p class="search-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a href="#">Поиск гостиницы в Седоне</a>
+        <p class="search-text">Укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="brown-search-button" href="#">Поиск гостиницы в Седоне</a>
         <section class="search-form">
           <h2 class="visually-hidden">Форма поиска</h2>
           <form class="user" method="get" action="https://echo.htmlacademy.ru">
             <p class="search-form-item">
-              <label class="date-label" for="check-in-date">Дата заезда:</label>
-              <input class="date-input" id="check-in-date" type="text" name="check-in-date" value="" placeholder="24.04.2017">
+              <label class="search-option" for="check-in-date">Дата заезда:</label>
+              <input class="search-option" id="check-in-date" type="text" name="check-in-date" value="" placeholder="24.04.2017">
               <button class="calendar-button" type="button"></button>
             </p>
             <p class="search-form-item">
-              <label class="date-label" for="check-out-date">Дата выезда:</label>
-              <input class="date-input" id="check-out-date" type="text" name="check-out-date" value="" placeholder="04.07.2017">
+              <label class="search-option" for="check-out-date">Дата выезда:</label>
+              <input class="search-option" id="check-out-date" type="text" name="check-out-date" value="" placeholder="04.07.2017">
               <button class="calendar-button" type="button"></button>
             </p>
             <p class="search-form-item">
-              <label class="people-label" for="adults">Взрослые:</label>
-              <button class="plus-button" type="button">-</button>
-              <input class="people-input" id="adults" type="text" name="adults-number" value="" placeholder="2">
-              <button class="minus-button" type="button">+</button>
+              <label class="search-option" for="adults">Взрослые:</label>
+              <button class="add-button" type="button">-</button>
+              <input class="search-option" id="adults" type="text" name="adults-number" value="" placeholder="2">
+              <button class="remove-button" type="button">+</button>
             </p>
             <p class="search-form-item">
-              <label class="people-label" for="children">Дети:</label>
-              <button class="plus-button" type="button">-</button>
-              <input class="people-input" id="children" type="text" name="children-number" value="" placeholder="0">
-              <button class="minus-button" type="button">+</button>
+              <label class="search-option" for="children">Дети:</label>
+              <button class="add-button" type="button">-</button>
+              <input class="search-option" id="children" type="text" name="children-number" value="" placeholder="0">
+              <button class="remove-button" type="button">+</button>
             </p>
-            <button class="submit-button" type="submit">Найти</button>
+            <button class="button button-blue search-button" type="submit">Найти</button>
           </form>
         </section>
       </section>

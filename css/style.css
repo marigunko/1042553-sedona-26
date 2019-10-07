@@ -1,11 +1,204 @@
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+
+  src: local("PT Sans"),
+       url("/fonts/ptsans.woff") format("woff"),
+       url("/fonts/ptsans.woff2") format("woff2");
+
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+
+  src: local("PT Sans"),
+       url("/fonts/ptsansbold.woff") format("woff"),
+       url("/fonts/ptsansbold.woff2") format("woff2");
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+/*-----COMMON-----*/
 body {
   margin: 0;
   padding: 0;
 
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: normal;
-  color: #333333;
+  text-align: center;
   text-transform: uppercase;
+
+  color: #333333;
+  background-color: #f2f2f2;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/*-----HEADER-----*/
+.main-navigation {
+  color: #000000;
+  background-color: #ffffff;
+
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.site-navigation a[href]:hover {
+  color: #81b3d2;
+}
+
+.site-navigation a[href]:focus {
+  color: #81b3d2;
+}
+
+ a.site-navigation-current {
+  color: #766357;
+}
+
+/*-----MAIN INDEX-----*/
+
+/*---REASONS---*/
+.intro {
+  background-image: url("../img/background-photo.jpg");
+}
+
+.about h3 {
+  font-weight: bold;
+}
+
+.about p {
+  font-size: 14px;
+}
+
+.reason-item-text h3 {
+  color: #ffffff;
+
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.reason-item-text p {
+  color: #ffffff;
+
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.reasons-list h3 {
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.reasons-list p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.feature-item h3 {
+      font-weight: bold;
+    line-height: 21px;
+}
+
+.feature-item p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/*---SEARCH---*/
+.search-title {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.search-text {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.brown-search-button {
+  color: #ffffff;
+  background-color: #766357;
+
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.brown-search-button:hover {
+  color: #ffffff;
+  background-color: #604e43;
+}
+
+.brown-search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+/*---SEARCH FORM---*/
+
+.search-option {
+  text-align: left;
+
+  font-size: 14px;
+}
+
+.search-button {
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border: none;
+  background-color: #81b3d2;
+
+  font: inherit;
+}
+
+.search-button:hover {
+  background-color: #669ec0;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+/*-----FOOTER-----*/
+.main-footer {
+  color: #000000;
+
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.hashtag {
+  font-weight: bold;
 }

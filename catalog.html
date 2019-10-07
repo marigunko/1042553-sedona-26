@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог жилья | Поиск жилья в Седоне</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -24,42 +23,43 @@
     <main>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр поиска</h2>
-        <form action="https://echo.htmlacademy.ru" method="get"></form>
-        <fieldset class="filters-fieldset">
-          <legend class="filters-legend">Инфраструктура:</legend>
-          <ul class="reset-list filter-list">
-            <li  class="filter-item">
-              <input class="filter-checkbox" type="checkbox" name="swimming-pool" id="swimming-pool" checked>
-              <label class="filter-title" for="swimming-pool">Бассеин</label>
-            </li>
-            <li class="filter-item">
-              <input class="filter-checkbox" type="checkbox" name="parking" id="parking">
-              <label class="filter-title" for="parking">Парковка</label>
-            </li>
-            <li class="filter-item">
-              <input class="filter-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
-              <label class="filter-title" for="wi-fi">Wi-Fi</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="filters-fieldset">
-          <legend class="filters-legend">Тип жилья:</legend>
-          <ul class="reset-list filter-list">
-            <li class="filter-item">
-              <input class="filter-checkbox" type="checkbox" name="hotel" id="hotel" checked>
-              <label class="filter-title" for="hotel">Гостиница</label>
-            </li>
-            <li class="filter-item">
-              <input class="filter-checkbox" type="checkbox" name="motel" id="motel" checked>
-              <label class="filter-title" for="motel">Мотель</label>
-            </li>
-            <li class="filter-item">
-              <input type="checkbox" name="appartments" id="appartments" checked>
-              <label class="filter-title" for="appartments">Аппартаменты</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button" type="submit">Показать</button>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="filters-fieldset">
+            <legend class="filters-legend">Инфраструктура:</legend>
+            <ul class="reset-list filter-list">
+              <li  class="filter-item">
+                <input class="filter-checkbox" type="checkbox" name="swimming-pool" id="swimming-pool" checked>
+                <label class="label-title" for="swimming-pool">Бассеин</label>
+              </li>
+              <li class="filter-item">
+                <input class="filter-checkbox" type="checkbox" name="parking" id="parking">
+                <label class="label-title" for="parking">Парковка</label>
+              </li>
+              <li class="filter-item">
+                <input class="filter-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+                <label class="label-title" for="wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filters-fieldset">
+            <legend class="filters-legend">Тип жилья:</legend>
+            <ul class="reset-list filter-list">
+              <li class="filter-item">
+                <input class="filter-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+                <label class="label-title" for="hotel">Гостиница</label>
+              </li>
+              <li class="filter-item">
+                <input class="filter-checkbox" type="checkbox" name="motel" id="motel" checked>
+                <label class="label-title" for="motel">Мотель</label>
+              </li>
+              <li class="filter-item">
+                <input type="checkbox" name="appartments" id="appartments" checked>
+                <label class="label-title" for="appartments">Аппартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </form>
       </section>
       <div class="sort-result">
         <p class="filter-result">Найдено: 3</p>
@@ -85,7 +85,7 @@
       <section class="results">
         <h2 class="visually-hidden">Результаты поиска</h2>
         <ul class=" reset-list result-list">
-          <li class="hotel-item">
+          <li class="result-item hotel">
             <img src="img/hotel-picture.jpg"  width="135" height="90" alt="Гостиница AMARA RESORT & SPA">
             <a href="#">
               <h3 class="hotel-name">AMARA RESORT & SPA</h3>
@@ -100,7 +100,7 @@
             </p>
             <p class="hotel-rating">Рейтинг: 8,5</p>
           </li>
-          <li class="hotel-item">
+          <li class="result-item hotel">
             <img src="img/motel-picture.jpg"  width="135" height="90" alt="Мотель DESERT QUAIL INN">
             <a href="#">
               <h3 class="hotel-name">Мотель DESERT QUAIL INN</h3>
@@ -115,7 +115,7 @@
             </p>
             <p class="hotel-rating">Рейтинг: 8,9</p>
           </li>
-          <li class="hotel-item">
+          <li class="result-item hotel">
             <img src="img/apartment-picture.jpg" width="135" height="90" alt="Аппартаменты VILLAS AT POCO DIABLO">
             <a href="#">
               <h3 class="hotel-name">Villas At Poco Diablo</h3>
