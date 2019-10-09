@@ -6,7 +6,6 @@
   src: local("PT Sans"),
        url("/fonts/ptsans.woff") format("woff"),
        url("/fonts/ptsans.woff2") format("woff2");
-
 }
 
 @font-face {
@@ -20,7 +19,11 @@
 }
 
 html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 /*-----COMMON-----*/
 body {
@@ -30,7 +33,7 @@ body {
   text-align: center;
   text-transform: uppercase;
 
-  color: #333333;
+  color: #000000;
   background-color: #f2f2f2;
 
   font-family: "PT Sans", Arial, sans-serif;
@@ -54,6 +57,14 @@ a {
   list-style: none;
 }
 
+.blue-button {
+  background-color: #81b3d2;
+}
+
+.brown-button {
+  background-color: #766357;
+}
+
 /*-----HEADER-----*/
 .main-navigation {
   color: #000000;
@@ -69,6 +80,8 @@ a {
 
 .site-navigation a {
   color: #000000;
+
+  font-weight: bold;
 }
 
 .site-navigation a[href]:hover {
@@ -90,12 +103,24 @@ a {
   background-image: url("../img/background-photo.jpg");
 }
 
+.about {
+  background-color: #ffffff;
+}
+
 .about h3 {
+  color: #000000;
+
   font-weight: bold;
 }
 
 .about p {
+  color: #000000;
+
   font-size: 14px;
+}
+
+.reason-item-text {
+  background-color: #81b3d2;
 }
 
 .reason-item-text h3 {
@@ -112,6 +137,10 @@ a {
   line-height: 21px;
 }
 
+.reasons-list {
+  background-color: #eeeeee;
+}
+
 .reasons-list h3 {
   font-weight: bold;
   line-height: 21px;
@@ -122,9 +151,13 @@ a {
   line-height: 21px;
 }
 
+.features-list {
+  background-color: #ffffff;
+}
+
 .feature-item h3 {
-      font-weight: bold;
-    line-height: 21px;
+  font-weight: bold;
+  line-height: 21px;
 }
 
 .feature-item p {
@@ -133,6 +166,10 @@ a {
 }
 
 /*---SEARCH---*/
+.search {
+  background-color: #ffffff;
+}
+
 .search-title {
   font-size: 30px;
   font-weight: bold;
@@ -144,7 +181,7 @@ a {
   line-height: 24px;
 }
 
-.brown-search-button {
+a.brown-button {
   color: #ffffff;
   background-color: #766357;
 
@@ -153,21 +190,25 @@ a {
   line-height: 26px;
 }
 
-.brown-search-button:hover {
+a.brown-button:hover {
   color: #ffffff;
   background-color: #604e43;
 }
 
-.brown-search-button:active {
+a.brown-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
-/*---SEARCH FORM---*/
 
+/*---SEARCH FORM---*/
 .search-option {
   text-align: left;
 
   font-size: 14px;
+}
+
+ input.search-option {
+  background-color: #f2f2f2;
 }
 
 .search-button {
@@ -179,7 +220,9 @@ a {
   border: none;
   background-color: #81b3d2;
 
-  font: inherit;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
 }
 
 .search-button:hover {
@@ -191,9 +234,110 @@ a {
   background-color: #5496bd;
 }
 
+/*-----MAIN CATALOG-----*/
+
+/*---FILTER FORM---*/
+.filters {
+  color: #ffffff;
+  background-image: url("../img/filter-background.jpg");
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  text-align: left;
+
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.filters ul {
+  list-style: none;
+
+  text-align: left;
+
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.sort-result {
+  background-color: #ffffff;
+}
+
+.filter-result {
+  text-align: left;
+
+  font-weight: bold;
+}
+
+.sort-title {
+  text-align: left;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.reset-list a {
+  text-align: left;
+
+  color: rgba(0, 0, 0, 0.3);
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.reset-list a[href]:hover { /*здесь текст ещё подчёркнут пунктиром*/
+  color: #81b3d2;
+}
+
+.reset-list a[href]:active {
+  color: #000000;
+}
+
+ a.reset-list-current {
+  color: #81b3d2;
+}
+
+/*---RESULTS---*/
+
+.result-list {
+  list-style: none;
+}
+
+.hotel-name {
+  color: #000000;
+
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px
+  text-align: left;
+}
+
+.hotel-category {
+  color: #333333;
+
+  font-size: 14px;
+  line-height: 21px
+  text-align: left;
+}
+
+.hotel-price {
+  color: #333333;
+
+  font-size: 14px;
+  line-height: 21px
+  text-align: left;
+}
+
+
+
 /*-----FOOTER-----*/
 .main-footer {
   color: #000000;
+  background-color: #ffffff;
 
   font-size: 14px;
   line-height: 26px;
