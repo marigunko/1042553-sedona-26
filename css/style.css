@@ -49,8 +49,22 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden {
-  visibility: hidden;
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip-path: inset(100%);
 }
 
 .reset-list {
@@ -60,12 +74,42 @@ a {
   list-style: none;
 }
 
-.blue-button {
-  background-color: #81b3d2;
+a.brown-button { /*Как сделать, чтобы на главной странице остались эти настройки по кнопкам, а в каталоге поменять у них их размер и размер шрифта? Просто добавить ещё класс?*/
+  color: #ffffff;
+  background-color: #766357;
+
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
 }
 
-.brown-button {
-  background-color: #766357;
+a.brown-button:hover {
+  color: #ffffff;
+  background-color: #604e43;
+}
+
+a.brown-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
+a.blue-button {
+  color: #ffffff;
+  background-color: #81b3d2;
+
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+a.blue-button:hover {
+  color: #ffffff;
+  background-color: #669ec0;
+}
+
+a.blue-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
 }
 
 /*-----HEADER-----*/
@@ -151,11 +195,8 @@ a {
   line-height: 21px;
 }
 
-.features-list {
-  background-color: #ffffff;
-}
-
 .feature-item h3 {
+  font-size: 21px;
   font-weight: bold;
   line-height: 21px;
 }
@@ -179,25 +220,6 @@ a {
 .search-text {
   font-size: 14px;
   line-height: 24px;
-}
-
-a.brown-button {
-  color: #ffffff;
-  background-color: #766357;
-
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 26px;
-}
-
-a.brown-button:hover {
-  color: #ffffff;
-  background-color: #604e43;
-}
-
-a.brown-button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #503e33;
 }
 
 /*---SEARCH FORM---*/
@@ -332,7 +354,31 @@ a.brown-button:active {
   text-align: left;
 }
 
+a.blue-button {
+  color: #ffffff;
+  background-color: #81b3d2;
 
+  font-size: 14px;
+  line-height: 21px;
+}
+
+a.blue-button:hover {
+  color: #ffffff;
+  background-color: #669ec0;
+}
+
+a.blue-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.hotel-rating {
+  color: #666666;
+  background-color: #f2f2f2;
+
+  font-size: 14px;
+  line-height: 21px;
+}
 
 /*-----FOOTER-----*/
 .main-footer {
