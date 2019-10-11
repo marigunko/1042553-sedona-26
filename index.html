@@ -3,61 +3,152 @@
   <head>
     <meta charset="utf-8">
     <title>Поиск жилья в Седоне</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <nav>
-          <a>
-            <img src="img/logo.svg" width="115" height="41" alt="Логотип «Седона»">
+    <header class="main-header">
+      <nav class="main-navigation">
+          <a class="main-header-logo">
+            <img src="img/icons/logo.svg" width="115" height="41" alt="Логотип «Седона»">
           </a>
-        <ul>
-          <li><a href="#">ИНФОРМАЦИЯ</a></li>
-          <li><a href="#">ФОТО И ВИДЕО</a></li>
-          <li><a href="#">КАРТА ШТАТА</a></li>
-          <li><a href="#">ГОСТИНИЦЫ</a></li>
+        <ul class="reset-list site-navigation">
+          <li class="site-navigation-item"><a href="#">Информация</a></li>
+          <li class="site-navigation-item"><a href="#">Фото и видео</a></li>
+          <li class="site-navigation-item"><a href="#">Карта штата</a></li>
+          <li class="site-navigation-item"><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <img src="img/background-photo.jpg" width="1200" height="773" alt="Фоновое изображение">
-      <img src="polygon.svg" width="1201" height="59">
-        <p>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</p>
-        <p>РАССМОТРИМ ПЯТЬ ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>
-<!-- Здесь будет блок -->
-        <p>ЗАИНТЕРЕСОВАЛИСЬ?</p>
-        <p>УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ,<br>
-        И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>
-        <section>
-          <h2>ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2>
-<!-- Здесь будет форма -->
-        </section>
-    </main>
-    <footer>
-      <p>#VISITSEDONA</p>
+    <main class="container">
+      <section class="intro">
+        <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
+        <img src="img/icons/intro-welcome.svg" width="459" height="353" alt="Добро пожаловать в великолепную Седону">
+        <div class="about">
+          <h3>Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        </div>
+      </section>
+      <section class="reasons">
+        <h2 class="visually-hidden">Преимущества Седоны</h2>
+        <div class="background-blue">
+          <section class="reason-item-text">
+            <h3>Настоящий городок</h3>
+            <p>— №1 —</p>
+            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </section>
+          <div class="reason-image-wrapper">
+            <img src="img/feature-picture.jpg" width="800" height="256" alt="Настоящий городок">
+          </div>
+        </div>
         <div>
-        <p>Давайте дружить!</p>
-          <ul>
-            <li>
-              <a href="#">
-                <img src="tw-icon.svg" width="17" height="15" alt="Твиттер">
-              </a>
+          <ul class="reset-list features-list">
+            <li class="feature-item">
+              <h3>Жильё</h3>
+              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
-            <li>
-              <a href="#">
-                <img src="fb-icon.svg" width="17" height="15" alt="Фейсбук">
-              </a>
+            <li class="feature-item">
+              <h3>Еда</h3>
+              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li>
-              <a href="#">
-                <img src="youtube-icon.svg" width="17" height="15" alt="Ютуб">
-              </a>
+            <li class="feature-item">
+              <h3>Сувениры</h3>
+              <p>Не только китайского, но и местного производства!</p>
             </li>
           </ul>
-      </div>
-      <p>
-        <span>WEBSITE BY</span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="logo-htmla.svg" width="17" height="15" alt="Логотип HTML Академии">
+        </div>
+        <div class="background-blue">
+          <section class="reason-item-text">
+            <h3>Там есть мост Дьявола</h3>
+            <p>— №2 —</p>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </section>
+          <div class="reason-image-wrapper">
+            <img src="img/layer-5.jpg" width="800" height="256" alt="Мост Дьявола">
+          </div>
+        </div>
+        <div>
+          <ol class="reset-list reasons-list">
+            <li class="reason-item">
+              <h3>Небольшая площадь</h3>
+              <p>— №3 —</p>
+              <p>Все достопримечательности находятся очень близко</p>
+            </li>
+            <li class="reason-item">
+              <h3>Красивая дорога</h3>
+              <p>— №4 —</p>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li class="reason-item">
+              <h3>Мало туристов</h3>
+              <p>— №5 —</p>
+              <p>Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="search">
+        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+        <p class="search-title">Заинтересовались?</p>
+        <p class="search-text">Укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="brown-button" href="#">Поиск гостиницы в Седоне</a>
+        <section class="search-form">
+          <h2 class="visually-hidden">Форма поиска</h2>
+          <form class="user" method="get" action="https://echo.htmlacademy.ru">
+            <p class="search-form-item">
+              <label class="search-option" for="check-in-date">Дата заезда:</label>
+              <input class="search-option" id="check-in-date" type="text" name="check-in-date" value="" placeholder="24.04.2017">
+              <button class="calendar-button" type="button"></button>
+            </p>
+            <p class="search-form-item">
+              <label class="search-option" for="check-out-date">Дата выезда:</label>
+              <input class="search-option" id="check-out-date" type="text" name="check-out-date" value="" placeholder="04.07.2017">
+              <button class="calendar-button" type="button"></button>
+            </p>
+            <p class="search-form-item">
+              <label class="search-option" for="adults">Взрослые:</label>
+              <button class="add-button" type="button">-</button>
+              <input class="search-option" id="adults" type="text" name="adults-number" value="" placeholder="2">
+              <button class="remove-button" type="button">+</button>
+            </p>
+            <p class="search-form-item">
+              <label class="search-option" for="children">Дети:</label>
+              <button class="add-button" type="button">-</button>
+              <input class="search-option" id="children" type="text" name="children-number" value="" placeholder="0">
+              <button class="remove-button" type="button">+</button>
+            </p>
+            <button class="button blue-button search-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p class="hashtag">#VISITSEDONA</p>
+      <section class="footer-social">
+        <h2 class="visually-hidden">Седона в соцсетях</h2>
+        <ul class="reset-list">
+          <li class="reset-item">
+            <a class="social-button" href="#">
+              <img src="img/icons/tw-icon.svg" width="17" height="15" alt="Твиттер">
+            </a>
+          </li>
+          <li class="reset-item">
+            <a class="social-button" href="#">
+              <img src="img/icons/fb-icon.svg" width="17" height="15" alt="Фейсбук">
+            </a>
+          </li>
+          <li class="reset-item">
+            <a class="social-button" href="#">
+              <img src="img/icons/youtube-icon.svg" width="17" height="15" alt="Ютуб">
+            </a>
+          </li>
+        </ul>
+      </section>
+      <p class="footer-copyright">
+        <span>Website by</span>
+        <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/icons/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Академии">
         </a>
       </p>
     </footer>
