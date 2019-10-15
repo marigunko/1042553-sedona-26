@@ -37,6 +37,8 @@ body {
 
   color: #000000;
   background-color: #f2f2f2;
+  background-size: 1280px;
+  background-repeat: no-repeat;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 21px;
@@ -111,23 +113,61 @@ a.blue-button:active {
   background-color: #5496bd;
 }
 
-/*-----HEADER-----*/
-.main-navigation {
-  color: #000000;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 auto;
   background-color: #ffffff;
+}
 
-  font-size: 14px;
-  line-height: 26px;
+/*-----HEADER-----*/
+
+.main-header-logo {
+  display: none;
+  margin-left: : 51px;
+  margin-right: : 53px;
+}
+
+.main-navigation {
+  display; flex;
+  align-items: center;
+  width: 1200px;
+  margin: auto;
+
+  color: #000000;
 }
 
 .site-navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.site-navigation-item {
+  width: 239px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item-left-side {
+  text-align: left;
+  margin-left: 73px;
+  padding-right: : 40px;
+}
+
+.item-right-side {
+  text-align: right;
+  margin-left: 73px;
+  padding-left: 40px;
 }
 
 .site-navigation a {
   color: #000000;
-
   font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 .site-navigation a[href]:hover {
@@ -144,32 +184,49 @@ a.blue-button:active {
 
 /*-----MAIN INDEX-----*/
 
-/*---REASONS---*/
+/*---INTRO---*/
 .intro {
   background-image: url("../img/background-photo.jpg");
+  width: 1200px;
+  height: 773px;
+  background-repeat: no-repeat;
+}
+
+.about {
+  background-color: #ffffff;
 }
 
 .about h3 {
+  max-width: 440px;
   color: #000000;
 
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+  text-align: center;
 }
 
 .about p {
+  max-width: 449px;
   color: #000000;
 
   font-size: 14px;
   line-height: 26px;
+  text-align: center;
+}
+
+/*---REASONS---*/
+.reasons {
+  display: flex;
+
 }
 
 .reason-item-text {
+  width: 280px;
   background-color: #81b3d2;
 }
 
 .reason-item-text h3 {
-  color: #ffffff;
 
   font-size: 21px;
   font-weight: bold;
@@ -177,7 +234,6 @@ a.blue-button:active {
 }
 
 .reason-item-text p {
-  color: #ffffff;
 
   font-size: 14px;
   line-height: 21px;
@@ -381,8 +437,9 @@ a.blue-button:active {
 
 /*-----FOOTER-----*/
 .main-footer {
+  display: flex;
+
   color: #000000;
-  background-color: #ffffff;
 
   font-size: 14px;
   line-height: 26px;
