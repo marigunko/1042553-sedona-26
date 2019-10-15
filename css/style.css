@@ -37,8 +37,8 @@ body {
 
   color: #000000;
   background-color: #f2f2f2;
-  background-size: 1280px;
   background-repeat: no-repeat;
+  background-size: 1280px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 21px;
@@ -68,14 +68,15 @@ a {
   clip-path: inset(100%);
 }
 
-.reset-list {
-  margin: 0;
-  padding: 0;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 auto;
 
-  list-style: none;
+  background-color: #ffffff;
 }
 
-a.brown-button { /*Как сделать, чтобы на главной странице остались эти настройки по кнопкам, а в каталоге поменять у них их размер и размер шрифта? Просто добавить ещё класс?*/
+.brown-button { /*Как сделать, чтобы на главной странице остались эти настройки по кнопкам, а в каталоге поменять у них их размер и размер шрифта? Просто добавить ещё класс?*/
   color: #ffffff;
   background-color: #766357;
 
@@ -84,17 +85,17 @@ a.brown-button { /*Как сделать, чтобы на главной стр�
   line-height: 26px;
 }
 
-a.brown-button:hover {
+.brown-button:hover {
   color: #ffffff;
   background-color: #604e43;
 }
 
-a.brown-button:active {
+.brown-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
 
-a.blue-button {
+.blue-button {
   color: #ffffff;
   background-color: #81b3d2;
 
@@ -103,70 +104,48 @@ a.blue-button {
   line-height: 26px;
 }
 
-a.blue-button:hover {
+.blue-button:hover {
   color: #ffffff;
   background-color: #669ec0;
 }
 
-a.blue-button:active {
+.blue-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 auto;
-  background-color: #ffffff;
-}
-
 /*-----HEADER-----*/
+
+.main-header {
+  margin-bottom: 76px;
+}
 
 .main-header-logo {
   display: none;
-  margin-left: : 51px;
-  margin-right: : 53px;
 }
 
 .main-navigation {
-  display; flex;
+  display: flex;
   align-items: center;
-  width: 1200px;
-  margin: auto;
-
-  color: #000000;
 }
 
 .site-navigation {
   display: flex;
-  margin: 0;
-  padding: 0;
+
   list-style: none;
 }
 
-.site-navigation-item {
-  width: 239px;
-  margin: 0;
-  padding: 0;
+.site-navigation-item {/*Здесь всё-таки я понимаю только что можно разделить на левую и правую части и сделать padding-left/right*/
+  width: 300px;
+
   list-style: none;
-}
-
-.item-left-side {
-  text-align: left;
-  margin-left: 73px;
-  padding-right: : 40px;
-}
-
-.item-right-side {
-  text-align: right;
-  margin-left: 73px;
-  padding-left: 40px;
 }
 
 .site-navigation a {
   color: #000000;
-  font-weight: bold;
+
   font-size: 14px;
+  font-weight: bold;
   line-height: 26px;
 }
 
@@ -186,47 +165,58 @@ a.blue-button:active {
 
 /*---INTRO---*/
 .intro {
-  background-image: url("../img/background-photo.jpg");
-  width: 1200px;
-  height: 773px;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro-welcome {
+  margin-bottom: 140px;
 }
 
 .about {
-  background-color: #ffffff;
+  width: 489px;
+
+  list-style: none;
 }
 
-.about h3 {
-  max-width: 440px;
+.intro-title {
   color: #000000;
 
   font-size: 21px;
-  font-weight: bold;
+  font-weight: bold;/*Не дошло, почему bold не применился*/
   line-height: 26px;
-  text-align: center;
 }
 
-.about p {
-  max-width: 449px;
+.intro-text {
   color: #000000;
 
   font-size: 14px;
   line-height: 26px;
-  text-align: center;
 }
 
 /*---REASONS---*/
 .reasons {
   display: flex;
-
+  flex-direction: column;
 }
 
-.reason-item-text {
-  width: 280px;
+.reason-row {
+  display: flex;
+}
+
+.background-blue {
   background-color: #81b3d2;
 }
 
+.reason-item-text {
+  width: 400px;
+
+  list-style: none;
+}
+
 .reason-item-text h3 {
+  color: #ffffff;
 
   font-size: 21px;
   font-weight: bold;
@@ -234,20 +224,40 @@ a.blue-button:active {
 }
 
 .reason-item-text p {
+  color: #ffffff;
 
   font-size: 14px;
   line-height: 21px;
 }
+.reasons-list {
+  display: flex;
+}
 
-.reasons-list h3 {
+.reason-item {
+  width: 400px;
+
+  list-style: none;
+}
+
+.reasons-item h3 {
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
 }
 
-.reasons-list p {
+.reasons-item p {
   font-size: 14px;
   line-height: 21px;
+}
+
+.features-list {
+  display: flex;
+}
+
+.feature-item {
+  width: 400px;
+
+  list-style: none;
 }
 
 .feature-item h3 {
@@ -438,13 +448,29 @@ a.blue-button:active {
 /*-----FOOTER-----*/
 .main-footer {
   display: flex;
+}
+.hashtag {
+  width: 400px;
 
+  list-style: none;
+}
+
+p.hashtag {
   color: #000000;
 
   font-size: 14px;
+  font-weight: bold;
   line-height: 26px;
 }
 
-.hashtag {
-  font-weight: bold;
+.footer-social {
+  width: 400px;
+
+  list-style: none;
+}
+
+.footer-copyright {
+  width: 400px;
+
+  list-style: none;
 }
