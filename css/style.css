@@ -615,10 +615,8 @@ a {
 
   color: #333333;
 
-  font-size: 14px;
-  line-height: 21px
-  text-align: left;
-}
+  margin: 0;
+  margin-bottom: 16px;
 
 .hotel-image-wrapper {
   width: 135px;
