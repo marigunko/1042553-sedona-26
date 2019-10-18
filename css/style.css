@@ -50,6 +50,10 @@ a {
   text-decoration: none;
 }
 
+.reset-list {
+  list-style: none;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
@@ -74,44 +78,6 @@ a {
   padding: 0 auto;
 
   background-color: #ffffff;
-}
-
-.brown-button { /*Как сделать, чтобы на главной странице остались эти настройки по кнопкам, а в каталоге поменять у них их размер и размер шрифта? Просто добавить ещё класс?*/
-  color: #ffffff;
-  background-color: #766357;
-
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 26px;
-}
-
-.brown-button:hover {
-  color: #ffffff;
-  background-color: #604e43;
-}
-
-.brown-button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #503e33;
-}
-
-.blue-button {
-  color: #ffffff;
-  background-color: #81b3d2;
-
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 26px;
-}
-
-.blue-button:hover {
-  color: #ffffff;
-  background-color: #669ec0;
-}
-
-.blue-button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #5496bd;
 }
 
 /*-----HEADER-----*/
@@ -229,6 +195,7 @@ a {
   font-size: 14px;
   line-height: 21px;
 }
+
 .reasons-list {
   display: flex;
 }
@@ -252,6 +219,7 @@ a {
 
 .features-list {
   display: flex;
+  justify-content: space-between;
 }
 
 .feature-item {
@@ -272,9 +240,6 @@ a {
 }
 
 /*---SEARCH---*/
-.search {
-  background-color: #ffffff;
-}
 
 .search-title {
   font-size: 30px;
@@ -285,6 +250,27 @@ a {
 .search-text {
   font-size: 14px;
   line-height: 24px;
+}
+
+.brown-button-search {
+  list-style: none;
+
+  color: #ffffff;
+  background-color: #766357;
+
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.brown-button-search:hover {
+  color: #ffffff;
+  background-color: #604e43;
+}
+
+.brown-button-search:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
 }
 
 /*---SEARCH FORM---*/
@@ -298,7 +284,7 @@ a {
   background-color: #f2f2f2;
 }
 
-.search-button {
+.blue-button-search {
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -312,11 +298,11 @@ a {
   line-height: 26px;
 }
 
-.search-button:hover {
+.blue-button-search:hover {
   background-color: #669ec0;
 }
 
-.search-button:active {
+.blue-button-search:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
@@ -325,8 +311,18 @@ a {
 
 /*---FILTER FORM---*/
 .filters {
-  color: #ffffff;
+  padding-top: 31px;
+  padding-right: 74px;
+  padding-bottom: 31px;
+  padding-left: 72px;
+
   background-image: url("../img/filter-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
 }
 
 .filters fieldset {
@@ -334,7 +330,11 @@ a {
 }
 
 .filters legend {
+  margin-bottom: 28px;
+
   text-align: left;
+
+  color: #ffffff;
 
   font-size: 16px;
   font-weight: bold;
@@ -342,29 +342,197 @@ a {
 }
 
 .filters ul {
-  list-style: none;
-
   text-align: left;
+
+  color: #ffffff;
 
   font-size: 14px;
   line-height: 21px;
 }
 
+.filter-item {
+  margin-bottom: 23px;
+}
+
+
+.filter-range {
+  width: 330px;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+
+  height: 36px;
+  margin-bottom: 20px;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+
+  font-size: 0;
+}
+
+.price-controls::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  content: "";
+  transform: translate(-50%, -50%);
+
+  background: #ffffff;
+}
+
+.price-controls label {
+  display: inline-block;
+
+  cursor: pointer;
+  vertical-align: top;
+
+  font-size: 14px;
+  line-height: 38px;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  border: none;
+  background: none;
+
+  font: inherit;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  cursor: pointer;
+
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  background: #ababab;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.filter-button {
+  display: block;
+
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  cursor: pointer;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background: transparent;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.filter-button:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
 .sort-result {
-  background-color: #ffffff;
+  display: flex;
+
+  padding-top: 31px;
+  padding-right: 73px;
+  padding-bottom: 33px;
+  padding-left: 72px;
+}
+.sort-options {
+  display: flex;
 }
 
 .filter-result {
+  margin-right: 49px;
+
   text-align: left;
 
+  font-size: 21px;
   font-weight: bold;
+  line-height: 26px;
 }
 
 .sort-title {
+  margin-right: 40px;
+
   text-align: left;
 
   font-size: 12px;
   line-height: 18px;
+}
+
+.sort-by-category {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+}
+
+.category {
+  margin-right: 33px;
 }
 
 .sort-by-category a {
@@ -388,10 +556,23 @@ a {
   color: #81b3d2;
 }
 
-/*---RESULTS---*/
+.sort-by-priority {
+  margin-left: auto;
+}
 
+/*---RESULTS---*/
 .result-list {
-  list-style: none;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.result-item {
+  display: flex;
+
+  padding-top: 30px;
+  padding-right: 73px;
+  padding-bottom: 30px;
+  padding-left: 72px;
 }
 
 .hotel-name {
@@ -403,7 +584,13 @@ a {
   text-align: left;
 }
 
-.hotel-category {
+.hotel-choice {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  margin-bottom: 16px;
+
   color: #333333;
 
   font-size: 14px;
@@ -411,33 +598,64 @@ a {
   text-align: left;
 }
 
-.hotel-price {
-  color: #333333;
+a.blue-button-details {
+  margin: 0;
+  margin-right: 6px;
+  padding-top: 8px;
+  padding-right: 17px;
+  padding-bottom: 7px;
+  padding-left: 17px;
 
-  font-size: 14px;
-  line-height: 21px
-  text-align: left;
-}
-
-a.blue-button {
   color: #ffffff;
   background-color: #81b3d2;
 
   font-size: 14px;
+  font-weight: bold;
   line-height: 21px;
 }
 
-a.blue-button:hover {
+a.blue-button-details:hover {
   color: #ffffff;
   background-color: #669ec0;
 }
 
-a.blue-button:active {
+a.blue-button-details:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
 
+a.brown-button-booking {
+  margin: 0;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+
+  color: #ffffff;
+  background-color: #766357;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+a.brown-button-booking:hover {
+  color: #ffffff;
+  background-color: #604e43;
+}
+
+a.brown-button-booking:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
 .hotel-rating {
+  display: flex;
+  align-items: flex-end;
+
+  margin: 0;
+  margin-left: 13px;
+
   color: #666666;
   background-color: #f2f2f2;
 
