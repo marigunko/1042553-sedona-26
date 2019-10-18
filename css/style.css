@@ -3,9 +3,9 @@
   font-weight: 400;
   font-style: normal;
 
-  src: local("PT Sans"),
-       url("/fonts/ptsans.woff") format("woff"),
-       url("/fonts/ptsans.woff2") format("woff2");
+  src: local("PTSans-Regular"),
+       url("../fonts/ptsans.woff") format("woff"),
+       url("../fonts/ptsans.woff2") format("woff2");
 }
 
 @font-face {
@@ -13,9 +13,10 @@
   font-weight: 700;
   font-style: normal;
 
-  src: local("PT Sans"),
-       url("/fonts/ptsansbold.woff") format("woff"),
-       url("/fonts/ptsansbold.woff2") format("woff2");
+  src: local("PTSans-Bold"),
+       url("../fonts/ptsansbold.woff") format("woff"),
+       url("../fonts/ptsansbold.woff2") format("woff2");
+
 }
 
 html {
@@ -51,7 +52,14 @@ a {
 }
 
 .reset-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.reset-text {
+  margin: 0;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -75,7 +83,6 @@ a {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 auto;
 
   background-color: #ffffff;
 }
@@ -83,7 +90,7 @@ a {
 /*-----HEADER-----*/
 
 .main-header {
-  margin-bottom: 76px;
+
 }
 
 .main-header-logo {
@@ -92,19 +99,14 @@ a {
 
 .main-navigation {
   display: flex;
-  align-items: center;
 }
 
 .site-navigation {
   display: flex;
-
-  list-style: none;
 }
 
 .site-navigation-item {/*Здесь всё-таки я понимаю только что можно разделить на левую и правую части и сделать padding-left/right*/
   width: 300px;
-
-  list-style: none;
 }
 
 .site-navigation a {
@@ -142,8 +144,6 @@ a {
 
 .about {
   width: 489px;
-
-  list-style: none;
 }
 
 .intro-title {
@@ -206,13 +206,13 @@ a {
   list-style: none;
 }
 
-.reasons-item h3 {
+.reason-item h3 {
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
 }
 
-.reasons-item p {
+.reason-item p {
   font-size: 14px;
   line-height: 21px;
 }
@@ -253,6 +253,12 @@ a {
 }
 
 .brown-button-search {
+  margin: 0;
+  padding-top: 35px;
+  padding-right: 139px;
+  padding-bottom: 33px;
+  padding-left: 140px;
+
   list-style: none;
 
   color: #ffffff;
@@ -274,6 +280,10 @@ a {
 }
 
 /*---SEARCH FORM---*/
+.search-form {
+  display: none;
+}
+
 .search-option {
   text-align: left;
 
@@ -285,8 +295,12 @@ a {
 }
 
 .blue-button-search {
-  text-align: center;
-  vertical-align: middle;
+  margin: 0;
+  padding-top: 17px;
+  padding-right: 197px;
+  padding-bottom: 22px;
+  padding-left: 196px;
+
   text-transform: uppercase;
 
   color: #ffffff;
@@ -495,6 +509,8 @@ a {
 
 .sort-result {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   padding-top: 31px;
   padding-right: 73px;
@@ -506,13 +522,19 @@ a {
 }
 
 .filter-result {
-  margin-right: 49px;
+  width: 115px;
 
   text-align: left;
 
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+}
+
+.sort {
+  display: flex;
+
+  width: 800px;/*посчитать*/
 }
 
 .sort-title {
@@ -598,6 +620,21 @@ a {
   text-align: left;
 }
 
+.hotel-image-wrapper {
+  width: 135px;
+  height: 90px;
+}
+
+.hotel-description {
+  width: 258px;
+}
+
+.hotel-details {
+  width: 110px;
+  margin-left: auto;
+
+}
+
 a.blue-button-details {
   margin: 0;
   margin-right: 6px;
@@ -667,13 +704,14 @@ a.brown-button-booking:active {
 .main-footer {
   display: flex;
 }
-.hashtag {
-  width: 400px;
 
-  list-style: none;
+.footer-hashtag {
+  width: 400px;
 }
 
 p.hashtag {
+  text-align: center;
+
   color: #000000;
 
   font-size: 14px;
@@ -684,11 +722,11 @@ p.hashtag {
 .footer-social {
   width: 400px;
 
-  list-style: none;
+  text-align: center;
 }
 
 .footer-copyright {
   width: 400px;
 
-  list-style: none;
+  text-align: center;
 }
