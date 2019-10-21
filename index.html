@@ -24,7 +24,9 @@
       <main>
         <section class="intro">
           <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
-          <img class="intro-welcome" src="img/icons/intro-welcome.svg" width="459" height="353" alt="Добро пожаловать в великолепную Седону">
+          <div class="main-background-image">
+            <img class="intro-welcome" src="img/icons/intro-welcome.svg" width="459" height="353" alt="Добро пожаловать в великолепную Седону">
+          </div>
           <div class="about">
             <p class="reset-text intro-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
             <p class="reset-text intro-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -44,15 +46,18 @@
           </div>
           <div>
             <ul class="reset-list features-list">
-              <li class="feature-item">
+              <li class="feature-item feature-row">
+                <div class="feature-icon house-icon"></div>
                 <h3 class="reset-text">Жильё</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li class="feature-item">
+              <li class="feature-item feature-row">
+                <div class="feature-icon burger-icon"></div>
                 <h3 class="reset-text">Еда</h3>
                 <p class="reset-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li class="feature-item">
+              <li class="feature-item feature-row">
+                <div class="feature-icon present-icon"></div>
                 <h3 class="reset-text">Сувениры</h3>
                 <p class="reset-text">Не только китайского, но и местного производства!</p>
               </li>
@@ -89,8 +94,10 @@
           </div>
         </section>
         <section class="search">
-          <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-          <p class="reset-text search-title">Заинтересовались?</p>
+          <div class="search-text">
+            <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+            <p class="reset-text search-title">Заинтересовались?</p>
+          </div>
           <p class="reset-text search-text">Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="brown-button-search" href="#">Поиск гостиницы в Седоне</a>
@@ -122,6 +129,7 @@
               <button class="button blue-button-search" type="submit">Найти</button>
             </form>
           </section>
+          <img src="img/map.jpg" width="1200" height="Седона, штат Аризона, США" alt="Мост Дьявола">
         </section>
       </main>
       <footer class="main-footer">

@@ -89,12 +89,12 @@ a {
 
 /*-----HEADER-----*/
 
-.main-header {
-
-}
-
 .main-header-logo {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
 }
 
 .main-navigation {
@@ -103,10 +103,13 @@ a {
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.site-navigation-item {/*Здесь всё-таки я понимаю только что можно разделить на левую и правую части и сделать padding-left/right*/
+.site-navigation-item {
   width: 300px;
+  min-height: 56px;
 }
 
 .site-navigation a {
@@ -138,12 +141,26 @@ a {
   flex-direction: column;
 }
 
+.main-background-image {
+  display: flex;
+  align-items: center;
+
+  width: 1200px;
+
+  background-image: url("../img/background-photo.jpg");/*добавить полигон*/
+  background-repeat: no-repeat;
+}
+
 .intro-welcome {
-  margin-bottom: 140px;
+  margin: auto;
+  padding-top: 76px;
+  padding-bottom: 79px;
 }
 
 .about {
   width: 489px;
+  min-height: 216px;
+  padding-top: 61px;
 }
 
 .intro-title {
@@ -155,6 +172,9 @@ a {
 }
 
 .intro-text {
+  padding-top: 38px;
+  padding-bottom: 56px;
+
   color: #000000;
 
   font-size: 14px;
@@ -172,13 +192,17 @@ a {
 }
 
 .background-blue {
+  height: 256px;
+
   background-color: #81b3d2;
 }
 
 .reason-item-text {
   width: 400px;
-
-  list-style: none;
+  padding-top: 46px;
+  padding-right: 48px;
+  padding-bottom: 64px;
+  padding-left: 49px;
 }
 
 .reason-item-text h3 {
@@ -198,12 +222,18 @@ a {
 
 .reasons-list {
   display: flex;
+  justify-content: space-between;
 }
 
 .reason-item {
   width: 400px;
+  min-height: 216px;
+  padding-top: 50px;
+  padding-right: 69px;
+  padding-bottom: 63px;
+  padding-left: 69px;
 
-  list-style: none;
+  background-color: #eeeeee;
 }
 
 .reason-item h3 {
@@ -223,9 +253,20 @@ a {
 }
 
 .feature-item {
-  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  list-style: none;
+  width: 400px;
+}
+
+
+.feature-row {
+  min-height: 330px;
+  padding-top: 56px;
+  padding-right: 58px;
+  padding-bottom: 86px;
+  padding-left: 58px;
 }
 
 .feature-item h3 {
@@ -239,7 +280,43 @@ a {
   line-height: 21px;
 }
 
+.feature-icon {
+  margin-bottom: 29px;
+}
+
+.house-icon {
+  width: 75px;
+  height: 72px;
+  margin-top: 4px;
+
+  background: url("../img/icons/icon-1-house.svg") no-repeat;
+}
+
+.burger-icon {
+  width: 74px;
+  height: 70px;
+  margin-top: 6px;
+
+  background: url("../img/icons/icon-2-burger.svg") no-repeat;
+}
+
+.present-icon {
+  width: 64px;
+  height: 76px;
+
+  background: url("../img/icons/icon-3-present.svg") no-repeat;
+}
+
 /*---SEARCH---*/
+.search {
+  min-height: 354px;
+}
+.search-text {
+  padding-top: 57px;
+  padding-right: 383px;
+  padding-bottom: 52px;
+  padding-left: 383px;
+}
 
 .search-title {
   font-size: 30px;
@@ -336,6 +413,7 @@ a {
 
 .filter-options {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -611,12 +689,12 @@ a {
   justify-content: space-between;
 
   margin: 0;
+  margin: 0;
+  margin-bottom: 16px;
   margin-bottom: 16px;
 
   color: #333333;
-
-  margin: 0;
-  margin-bottom: 16px;
+}
 
 .hotel-image-wrapper {
   width: 135px;
@@ -700,19 +778,25 @@ a.brown-button-booking:active {
 
 /*-----FOOTER-----*/
 .main-footer {
+  position: absolute;
+
   display: flex;
+  align-items: center;
+
+  opacity: 0.9;
 }
 
 .footer-hashtag {
   width: 400px;
+  margin: 0;
 }
 
-p.hashtag {
+.hashtag {
   text-align: center;
 
   color: #000000;
 
-  font-size: 14px;
+  font-size: 21px;
   font-weight: bold;
   line-height: 26px;
 }
@@ -723,8 +807,29 @@ p.hashtag {
   text-align: center;
 }
 
+.social {
+  display: flex;
+  width: 400px;
+}
+
+.social-button {
+  display: block;
+
+  width: 46px;
+  height: 48px;
+
+  text-decoration: none;
+
+  color: #000000;
+  background-color: #81b3d2;
+}
+
 .footer-copyright {
   width: 400px;
 
   text-align: center;
+}
+
+.copyright {
+  display: flex;
 }
