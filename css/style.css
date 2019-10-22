@@ -146,15 +146,15 @@ a {
   align-items: center;
 
   width: 1200px;
-
-  background-image: url("../img/background-photo.jpg");/*добавить полигон*/
+  background-image: url("../img/background-photo.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .intro-welcome {
   margin: auto;
   padding-top: 76px;
-  padding-bottom: 79px;
 }
 
 .about {
@@ -167,12 +167,12 @@ a {
   color: #000000;
 
   font-size: 21px;
-  font-weight: bold;/*Не дошло, почему bold не применился*/
+  font-weight: bold;
   line-height: 26px;
 }
 
 .intro-text {
-  padding-top: 38px;
+  padding-top: 28px;
   padding-bottom: 56px;
 
   color: #000000;
@@ -189,6 +189,11 @@ a {
 
 .reason-row {
   display: flex;
+}
+
+.reason-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .background-blue {
@@ -227,7 +232,7 @@ a {
 
 .reason-item {
   width: 400px;
-  min-height: 216px;
+  min-height: 256px;
   padding-top: 50px;
   padding-right: 69px;
   padding-bottom: 63px;
@@ -309,7 +314,7 @@ a {
 
 /*---SEARCH---*/
 .search {
-  min-height: 354px;
+  min-height: 291px;
 }
 .search-text {
   padding-top: 57px;
@@ -778,12 +783,17 @@ a.brown-button-booking:active {
 
 /*-----FOOTER-----*/
 .main-footer {
-  position: absolute;
+  position: relative;
 
   display: flex;
   align-items: center;
+}
 
-  opacity: 0.9;
+.index-footer {
+  min-height: 120px;
+  margin-top: -120px;
+
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-hashtag {
@@ -808,12 +818,23 @@ a.brown-button-booking:active {
 }
 
 .social {
-  display: flex;
   width: 400px;
+}
+.social-list {
+  display:flex;
+  justify-content: center;
+}
+
+.social-list li {
+  margin-right: 5px;
+}
+
+.social-list li:last-child {
+  margin-right: 0;
 }
 
 .social-button {
-  display: block;
+  display: flex;
 
   width: 46px;
   height: 48px;
@@ -822,6 +843,19 @@ a.brown-button-booking:active {
 
   color: #000000;
   background-color: #81b3d2;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-button:hover {
+  background-color: #669ec0;
+}
+.social-button:active {
+  background-color: #5496bd;
+}
+.social-button:active{
+  background-color: #5496bd;
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .footer-copyright {
@@ -832,4 +866,24 @@ a.brown-button-booking:active {
 
 .copyright {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.website-by {
+  margin-right: 6px;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.logo-htmlacademy {
+  fill: #231f20;
+}
+
+.logo-htmlacademy:hover {
+  fill: #81b3d2;
+}
+
+.logo-htmlacademy:active {
+  fill: #bdbbbc;
 }
