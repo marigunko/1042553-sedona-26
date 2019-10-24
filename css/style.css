@@ -40,6 +40,7 @@ body {
   background-color: #f2f2f2;
   background-repeat: no-repeat;
   background-size: 1280px;
+  box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 21px;
@@ -97,19 +98,40 @@ a {
   transform: translateX(-50%);
 }
 
-.main-navigation {
-  display: flex;
-}
-
 .site-navigation {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+
+  min-height: 56px;
+}
+
+.site-navigation-item:nth-child(1){
+  padding-left: 71px;
+
+  text-align: left;
+}
+
+.site-navigation-item:nth-child(2){
+  padding-left: 12px;
+
+  text-align: left;
+}
+
+.site-navigation-item:nth-child(3){
+  padding-right: 15px;
+
+  text-align: right;
+}
+
+.site-navigation-item:nth-child(4){
+  padding-right: 72px;
+
+  text-align: right;
 }
 
 .site-navigation-item {
   width: 300px;
-  min-height: 56px;
 }
 
 .site-navigation a {
@@ -137,33 +159,37 @@ a {
 /*---INTRO---*/
 .intro {
   display: flex;
-  align-items: center;
   flex-direction: column;
-}
 
-.main-background-image {
-  display: flex;
-  align-items: center;
+  min-height: 508px;
+  padding-top: 76px;
+  padding-bottom: 79px;
 
-  width: 1200px;
   background-image: url("../img/background-photo.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
-
+  background-position: center -50px;
+  background-size: cover;
 }
 
 .intro-welcome {
-  margin: auto;
-  padding-top: 76px;
+  display: block;
+
+  width: 459px;
+  height: 353px;
+  margin: 0 auto;
 }
 
 .about {
-  width: 489px;
-  min-height: 216px;
+  margin-top: 79px;
   padding-top: 61px;
+
+  background-color: #ffffff;
 }
 
 .intro-title {
+  width: 440px;
+  margin: 0 auto;
+
   color: #000000;
 
   font-size: 21px;
@@ -172,6 +198,8 @@ a {
 }
 
 .intro-text {
+  width: 490px;
+  margin: 0 auto;
   padding-top: 28px;
   padding-bottom: 56px;
 
@@ -205,9 +233,14 @@ a {
 .reason-item-text {
   width: 400px;
   padding-top: 46px;
-  padding-right: 48px;
+  padding-right: 60px;
   padding-bottom: 64px;
-  padding-left: 49px;
+  padding-left: 60px;
+}
+
+.reason-text-reverse {
+  padding-right: 48px;
+  padding-left: 49px;;
 }
 
 .reason-item-text h3 {
@@ -223,6 +256,32 @@ a {
 
   font-size: 14px;
   line-height: 21px;
+}
+
+.reason-text-title {
+  align-self: center;
+
+  max-width: 149px;
+  margin: 0 auto 25px;
+}
+
+.reason-text-number {
+  align-self: center;
+
+  margin-bottom: 21px;
+}
+
+.reasons-text-title {
+  align-self: center;
+
+  max-width: 149px;
+  margin: 0 auto 21px;
+}
+
+.reasons-text-number {
+  align-self: center;
+
+  margin-bottom: 21px;
 }
 
 .reasons-list {
@@ -265,12 +324,11 @@ a {
   width: 400px;
 }
 
-
 .feature-row {
   min-height: 330px;
-  padding-top: 56px;
+  padding-top: 60px;
   padding-right: 58px;
-  padding-bottom: 86px;
+  padding-bottom: 83px;
   padding-left: 58px;
 }
 
@@ -285,14 +343,15 @@ a {
   line-height: 21px;
 }
 
-.feature-icon {
-  margin-bottom: 29px;
+.feature-icon::before {
+  position: absolute;
+
+  content: "";
 }
 
 .house-icon {
   width: 75px;
   height: 72px;
-  margin-top: 4px;
 
   background: url("../img/icons/icon-1-house.svg") no-repeat;
 }
@@ -300,7 +359,6 @@ a {
 .burger-icon {
   width: 74px;
   height: 70px;
-  margin-top: 6px;
 
   background: url("../img/icons/icon-2-burger.svg") no-repeat;
 }
@@ -311,16 +369,21 @@ a {
 
   background: url("../img/icons/icon-3-present.svg") no-repeat;
 }
+.feature-text-title {
+  margin-top: 30px;
+  margin-bottom: 26px;
+}
 
 /*---SEARCH---*/
 .search {
-  min-height: 291px;
+
 }
-.search-text {
-  padding-top: 57px;
-  padding-right: 383px;
-  padding-bottom: 52px;
-  padding-left: 383px;
+
+.search-content {
+  width: 568px;
+  min-height: 205px;
+  margin: 0 auto;
+  padding-top: 49px;
 }
 
 .search-title {
@@ -330,18 +393,19 @@ a {
 }
 
 .search-text {
+  padding-top: 21px;
+  padding-bottom: 46px;
+
   font-size: 14px;
   line-height: 24px;
 }
 
 .brown-button-search {
-  margin: 0;
-  padding-top: 35px;
-  padding-right: 139px;
-  padding-bottom: 33px;
-  padding-left: 140px;
+  display: block;
 
-  list-style: none;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   color: #ffffff;
   background-color: #766357;
@@ -407,6 +471,7 @@ a {
 
 /*---FILTER FORM---*/
 .filters {
+  min-height: 217px;
   padding-top: 31px;
   padding-right: 74px;
   padding-bottom: 31px;
@@ -414,6 +479,8 @@ a {
 
   background-image: url("../img/filter-background.jpg");
   background-repeat: no-repeat;
+  background-position: center -50px;
+  background-size: cover;
 }
 
 .filter-options {
@@ -451,6 +518,13 @@ a {
   margin-bottom: 23px;
 }
 
+.label-title {
+  position: relative;
+
+  padding-left: 40px;
+
+  cursor: pointer;
+}
 
 .filter-range {
   width: 330px;
@@ -599,13 +673,15 @@ a {
   padding-right: 73px;
   padding-bottom: 33px;
   padding-left: 72px;
+
+  border-bottom: 1px solid #f2f2f2;
 }
 .sort-options {
   display: flex;
 }
 
 .filter-result {
-  width: 115px;
+  margin-right: 49px;
 
   text-align: left;
 
@@ -617,7 +693,7 @@ a {
 .sort {
   display: flex;
 
-  width: 800px;/*посчитать*/
+  width: 700px;/*посчитать*/
 }
 
 .sort-title {
@@ -678,6 +754,7 @@ a {
   padding-right: 73px;
   padding-bottom: 30px;
   padding-left: 72px;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .hotel-name {
@@ -713,7 +790,6 @@ a {
 .hotel-details {
   width: 110px;
   margin-left: auto;
-
 }
 
 a.blue-button-details {
@@ -835,6 +911,8 @@ a.brown-button-booking:active {
 
 .social-button {
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 46px;
   height: 48px;
@@ -843,8 +921,6 @@ a.brown-button-booking:active {
 
   color: #000000;
   background-color: #81b3d2;
-  justify-content: center;
-  align-items: center;
 }
 
 .social-button:hover {
@@ -855,6 +931,7 @@ a.brown-button-booking:active {
 }
 .social-button:active{
   background-color: #5496bd;
+
   fill: rgba(255, 255, 255, 0.3);
 }
 
@@ -872,18 +949,19 @@ a.brown-button-booking:active {
 
 .website-by {
   margin-right: 6px;
+
   font-size: 14px;
   line-height: 26px;
 }
 
-.logo-htmlacademy {
+.link-htmlacademy path {
   fill: #231f20;
 }
 
-.logo-htmlacademy:hover {
+.link-htmlacademy:hover path {
   fill: #81b3d2;
 }
 
-.logo-htmlacademy:active {
+.link-htmlacademy:active path {
   fill: #bdbbbc;
 }
