@@ -334,26 +334,19 @@ a {
 
 .features-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .feature-item {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
+  position: relative;
   width: 400px;
-}
-
-.feature-row {
   min-height: 330px;
-  padding-top: 60px;
   padding-right: 58px;
   padding-bottom: 83px;
   padding-left: 58px;
 }
 
 .feature-item h3 {
+  margin-top: 161px;
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
@@ -366,28 +359,29 @@ a {
 
 .feature-icon::before {
   position: absolute;
-
   content: "";
+  left: 50%;
+  top: 31px;
 }
 
-.house-icon {
+.house-icon::before {
   width: 75px;
   height: 72px;
-
+  margin-left: -37.5px;
   background: url("../img/icons/icon-1-house.svg") no-repeat;
 }
 
-.burger-icon {
+.burger-icon::before {
   width: 74px;
   height: 70px;
-
+  margin-left: -37px;
   background: url("../img/icons/icon-2-burger.svg") no-repeat;
 }
 
-.present-icon {
+.present-icon::before {
   width: 64px;
   height: 76px;
-
+  margin-left: -32px;
   background: url("../img/icons/icon-3-present.svg") no-repeat;
 }
 .feature-text-title {
