@@ -626,18 +626,15 @@ a {
 .filter-options {
   display: flex;
   justify-content: space-between;
-
-  width: 416px;
 }
 
-.filters fieldset {
-  padding: 0;
-
+.filters-fieldset {
+  width: 251px;
   border: none;
 }
 
-.filters legend {
-  margin-bottom: 18px;
+.filters-legend {
+  margin-bottom: 15px;
 
   text-align: left;
 
@@ -663,7 +660,7 @@ a {
 
   display: block;
 
-  padding-left: 21px;
+  padding-left: 22px;
 
   cursor: pointer;
 }
@@ -711,7 +708,7 @@ a {
 }
 
 .filter-item {
-  margin-bottom: 26px;
+  margin-bottom: 25px;
 }
 
 .label-title {
@@ -721,9 +718,12 @@ a {
 
   cursor: pointer;
 }
+.fieldset-range {
+  border: none;
+}
 
 .filter-range {
-  width: 330px;
+  width: 318px;
 
   text-transform: uppercase;
 
@@ -742,6 +742,8 @@ a {
 
 .price-controls {
   position: relative;
+  display: flex;
+  align-items: center;
 
   height: 36px;
   margin-bottom: 20px;
@@ -767,10 +769,8 @@ a {
 }
 
 .price-controls label {
-  display: inline-block;
 
   cursor: pointer;
-  vertical-align: top;
 
   font-size: 14px;
   line-height: 38px;
@@ -778,12 +778,13 @@ a {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
+  width: 50%;
 }
 
 .price-controls input {
   width: 50px;
   margin: 0;
+  margin-right: -20px;/*посчитать*/
 
   color: inherit;
   border: none;
@@ -868,7 +869,7 @@ a {
 
   padding-top: 31px;
   padding-right: 73px;
-  padding-bottom: 32px;
+  padding-bottom: 29px;
   padding-left: 72px;
 
   border-bottom: 1px solid #f2f2f2;
@@ -945,19 +946,19 @@ a {
   margin-left: auto;
 }
 
-.sort-button path {
+.sort-button {
   fill: #cacaca;
 }
 
-.sort-button:hover path {
+.sort-button:hover {
   fill: #000000;
 }
 
-.sort-button:active path {
+.sort-button:active {
   fill: #81b3d2;
 }
 
-.sort-button-active path {
+.sort-button-active {
   fill: #81b3d2;
 }
 
@@ -980,7 +981,7 @@ a {
 }
 
 .hotel-name {
-  padding-bottom: 6px;
+  padding-bottom: 5px;
 
   text-align: left;
 
@@ -1009,6 +1010,7 @@ a {
   width: 135px;
   height: 90px;
   margin-right: 30px;
+  margin-top: 3px;
 }
 
 .hotel-details {
@@ -1042,10 +1044,10 @@ a {
 }
 
 a.blue-button-details {
-  padding-top: 5px;
+  padding-top: 6px;
   padding-right: 17px;
-  padding-bottom: 5px;
-  padding-left: 17px;
+  padding-bottom: 4px;
+  padding-left: 16px;
 
   color: #ffffff;
   background-color: #81b3d2;
@@ -1067,10 +1069,10 @@ a.blue-button-details:active {
 
 a.brown-button-booking {
   margin: 0;
-  padding-top: 5px;
+  padding-top: 6px;
   padding-right: 16px;
-  padding-bottom: 5px;
-  padding-left: 16px;
+  padding-bottom: 4px;
+  padding-left: 17px;
 
   color: #ffffff;
   background-color: #766357;
@@ -1107,12 +1109,14 @@ a.brown-button-booking:active {
 
   font-size: 14px;
   line-height: 21px;
+  margin-top: 25px;
+  padding-top: 3px;
 }
 
 .rating-stars {
   width: 120px;
   height: 18px;
-  margin-top: 7px;
+  margin-top: 2px;
 
   background-image: url(../img/icons/star.svg);
   background-repeat: space;
@@ -1193,7 +1197,7 @@ footer {
 }
 
 .social-list li {
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 .social-list li:last-child {
