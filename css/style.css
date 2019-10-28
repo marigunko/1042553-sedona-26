@@ -244,16 +244,18 @@ a {
 }
 
 .background-blue {
-  height: 256px;
-
   background-color: #81b3d2;
+}
+.reason-image-wrapper {
+  width: 800px;
+  height: 256px;
 }
 
 .reason-item-text {
   width: 400px;
   padding-top: 46px;
   padding-right: 60px;
-  padding-bottom: 64px;
+  padding-bottom: 30px;
   padding-left: 60px;
 }
 
@@ -332,26 +334,19 @@ a {
 
 .features-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .feature-item {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
+  position: relative;
   width: 400px;
-}
-
-.feature-row {
   min-height: 330px;
-  padding-top: 60px;
   padding-right: 58px;
   padding-bottom: 83px;
   padding-left: 58px;
 }
 
 .feature-item h3 {
+  margin-top: 161px;
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
@@ -364,28 +359,29 @@ a {
 
 .feature-icon::before {
   position: absolute;
-
   content: "";
+  left: 50%;
+  top: 31px;
 }
 
-.house-icon {
+.house-icon::before {
   width: 75px;
   height: 72px;
-
+  margin-left: -37.5px;
   background: url("../img/icons/icon-1-house.svg") no-repeat;
 }
 
-.burger-icon {
+.burger-icon::before {
   width: 74px;
   height: 70px;
-
+  margin-left: -37px;
   background: url("../img/icons/icon-2-burger.svg") no-repeat;
 }
 
-.present-icon {
+.present-icon::before {
   width: 64px;
   height: 76px;
-
+  margin-left: -32px;
   background: url("../img/icons/icon-3-present.svg") no-repeat;
 }
 .feature-text-title {
@@ -471,45 +467,42 @@ a {
 .search-option {
   text-align: left;
 
-
   font-size: 14px;
   font-weight: bold;
 }
+.date-form-label {
 
-label.search-option {
+}
+
+.date-form-input {
   display: inline-block;
 }
 
- input.search-option {
-   width: 329px;
-   height: 29px;
-   padding: 5px 0 0 13px;
-
-   position: relative;
+.date-form-input {
+  width: 329px;
+  height: 38px;
+  padding: 5px 0 0 13px;
+  position: relative;
   border: 2px solid #f2f2f2;
   background-color: #f2f2f2;
 }
 
- input.search-option[type="text"]::placeholder {
+.date-form-input[type="text"]::placeholder {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   color: #000000;
 }
- input.search-option[type="text"]:hover {
+.date-form-input[type="text"]:hover {
   background-color: #ebebeb;
   border-color: #ebebeb;
 }
- input.search-option[type="text"]:focus {
+.date-form-input[type="text"]:focus {
   background-color: #ffffff;
   border-color: #e5e5e5;
 }
 
 .calendar-button {
-  background: url("../img/icons/calendar.svg") no-repeat;
-  padding: 0;
-  width: 21px;
-  height: 22px;
   position: absolute;
   right: 9px;
   top: 8px;
@@ -526,6 +519,10 @@ label.search-option {
 }
 .calendar-button :active {
   fill: #81b3d2;
+}
+
+.people-number {
+  display: flex;
 }
 
 .fieldset-adult {
@@ -673,7 +670,7 @@ label.search-option {
   position: absolute;
   left: -18px;
 
-  width: 23px;
+  width: 27px;
   height: 23px;
 
   content: "";
@@ -1107,18 +1104,16 @@ a.brown-button-booking:active {
 }
 
 .three-stars {
-  width: 67px;
+  width: 66px;
 }
 
 .four-stars {
-  width: 90px;
+  width: 89px;
 }
 
 .five-stars {
   width: 104px;
 }
-
-
 
 /*-----FOOTER-----*/
 .main-footer {
@@ -1141,7 +1136,8 @@ footer {
   min-height: 120px;
   margin-top: -120px;
 
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #ffffff;
+  opacity: 0.9;
 }
 
 .footer-hashtag {
