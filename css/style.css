@@ -422,10 +422,12 @@ fieldset {
   position: relative;
   z-index: 4;
 
-  width: 568px;
+  width: 600px;
   min-height: 205px;
   margin: 0 auto;
   padding-top: 53px;
+
+  background-color: #ffffff;
 }
 
 .search-title {
@@ -445,7 +447,7 @@ fieldset {
 .brown-button-search {
   display: inline-block;
 
-  width: 100%;
+  width: 568px;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -1335,7 +1337,7 @@ a.brown-button-booking:active {
 
 @keyframes bounce {
   0% {
-    transform: translateY(-300px);
+    transform: translateY(-290px);
   }
 
   100% {
