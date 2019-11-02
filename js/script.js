@@ -1,6 +1,6 @@
 var link = document.querySelector(".form-link");
 var popup = document.querySelector(".search-form");
-var close = popup.querySelector(".search-form");
+var close = popup.querySelector(".form-link");
 var form = popup.querySelector("form");
 
 var checkIn = popup.querySelector("[name=checkIn]");
@@ -16,12 +16,11 @@ link.addEventListener("click", function (evt) {
   } else {
     popup.classList.add("hidden-form");
   }
-
 });
+
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-show");
-  popup.classList.remove("modal-error");
 });
 
 form.addEventListener("submit", function (evt) {
