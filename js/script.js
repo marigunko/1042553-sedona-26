@@ -6,6 +6,11 @@ var form = popup.querySelector("form");
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-show");
+  if (popup.classList.contains("hidden-form")) {
+    popup.classList.remove("hidden-form");
+  } else {
+    popup.classList.add("hidden-form");
+  }
 });
 close.addEventListener("click", function (evt) {
   evt.preventDefault();

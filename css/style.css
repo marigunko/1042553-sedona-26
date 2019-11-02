@@ -419,6 +419,9 @@ fieldset {
 /*---SEARCH---*/
 
 .search-content {
+  position: relative;
+  z-index: 4;
+
   width: 568px;
   min-height: 205px;
   margin: 0 auto;
@@ -471,9 +474,8 @@ fieldset {
   left: 50%;
 
   width: 568px;
+  margin-left: -284px;
   padding: 55px;
-
-  transform: translateX(-50%);
 
   background-color: #ffffff;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
@@ -1148,7 +1150,6 @@ a.brown-button-booking:active {
   align-items: flex-end;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .hotel-rating {
@@ -1202,13 +1203,12 @@ a.brown-button-booking:active {
   align-items: center;
 }
 
-footer {
-  position: relative;
-
-  display: flex;
-  align-items: center;
+.main-footer:before {
+  display: inline-block;
 
   min-height: 120px;
+
+  content:"";
 }
 
 .index-footer {
@@ -1329,17 +1329,13 @@ footer {
   animation: shake 0.7s;
 }
 
+.hidden-form {
+  display: none;
+}
+
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
+    transform: translateY(-300px);
   }
 
   100% {
