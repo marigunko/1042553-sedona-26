@@ -183,6 +183,7 @@ fieldset {
   min-height: 508px;
   padding-top: 76px;
 
+  background-color: #81b3d2;
   background-image: url("../img/background-photo.jpg");
   background-repeat: no-repeat;
   background-position: center -85px;
@@ -322,6 +323,7 @@ fieldset {
 
 .reasons-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -348,6 +350,7 @@ fieldset {
 
 .features-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .feature-item {
@@ -437,7 +440,7 @@ fieldset {
 }
 
 .brown-button-search {
-  display: block;
+  display: inline-block;
 
   width: 100%;
   padding-top: 30px;
@@ -518,7 +521,9 @@ fieldset {
 
   width: 38px;
   height: 38px;
-  padding-bottom: 6px;
+  padding-top: 4px;
+  padding-right: 13px;
+  padding-bottom: 9px;
   padding-left: 13px;
 
   border: 2px solid #f2f2f2;
@@ -657,6 +662,7 @@ fieldset {
   padding-right: 70px;
   padding-left: 71px;
 
+  background-color: #766357;
   background-image: url("../img/filter-background.jpg");
   background-repeat: no-repeat;
   background-position: center -300px;
@@ -699,7 +705,7 @@ fieldset {
 .filter-item label {
   position: relative;
 
-  display: block;
+  display: inline-block;
 
   cursor: pointer;
 }
@@ -1083,7 +1089,7 @@ fieldset {
 }
 
 .hotel-buttons {
-  display: block;
+  display: inline-block;
 
   margin: 0;
 }
@@ -1309,4 +1315,56 @@ footer {
 
 .link-htmlacademy:active path {
   fill: #bdbbbc;
+}
+
+/*MODAL FORM INDEX*/
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.7s;
+}
+
+.modal-error {
+  animation: shake 0.7s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
