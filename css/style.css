@@ -83,7 +83,9 @@ fieldset {
 
   border: 0;
 
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
 }
 
 .container {
@@ -107,7 +109,8 @@ fieldset {
   left: 50%;
 
   content: "";
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .site-navigation {
@@ -296,27 +299,31 @@ fieldset {
 }
 
 .reason-text-title {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
 
   max-width: 200px;
   margin: 0 auto 23px;
 }
 
 .reason-text-number {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
 
   margin-bottom: 21px;
 }
 
 .reasons-text-title {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
 
   max-width: 149px;
   margin: 0 auto 23px;
 }
 
 .reasons-text-number {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
 
   margin-bottom: 21px;
 }
@@ -534,6 +541,46 @@ fieldset {
   background-color: #f2f2f2;
 }
 
+.adult-form-input[type="text"]::-webkit-input-placeholder,
+.children-form-input[type="text"]::-webkit-input-placeholder {
+  text-transform: uppercase;
+
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.adult-form-input[type="text"]::-moz-placeholder,
+.children-form-input[type="text"]::-moz-placeholder {
+  text-transform: uppercase;
+
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.adult-form-input[type="text"]:-ms-input-placeholder,
+.children-form-input[type="text"]:-ms-input-placeholder {
+  text-transform: uppercase;
+
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.adult-form-input[type="text"]::-ms-input-placeholder,
+.children-form-input[type="text"]::-ms-input-placeholder {
+  text-transform: uppercase;
+
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .adult-form-input[type="text"]::placeholder,
 .children-form-input[type="text"]::placeholder {
   text-transform: uppercase;
@@ -546,6 +593,42 @@ fieldset {
 
 .children-form-label {
   padding-left: 47px;
+}
+
+.date-form-input[type="text"]::-webkit-input-placeholder {
+  text-transform: uppercase;
+
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.date-form-input[type="text"]::-moz-placeholder {
+  text-transform: uppercase;
+
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.date-form-input[type="text"]:-ms-input-placeholder {
+  text-transform: uppercase;
+
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.date-form-input[type="text"]::-ms-input-placeholder {
+  text-transform: uppercase;
+
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .date-form-input[type="text"]::placeholder {
@@ -816,7 +899,8 @@ fieldset {
   height: 22px;
 
   content: "";
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 
   background: #ffffff;
 }
@@ -1324,31 +1408,49 @@ a.brown-button-booking:active {
 .modal-show {
   display: block;
 
-  animation: bounce 0.7s;
+  -webkit-animation: bounce 0.7s;
+
+          animation: bounce 0.7s;
 }
 
 .modal-error {
-  animation: shake 0.7s;
+  -webkit-animation: shake 0.7s;
+          animation: shake 0.7s;
 }
 
 .hidden-form {
   display: none;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
-    transform: translateY(-290px);
+    -webkit-transform: translateY(-290px);
+            transform: translateY(-290px);
   }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-@keyframes shake {
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-290px);
+            transform: translateY(-290px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 
   10%,
@@ -1356,13 +1458,40 @@ a.brown-button-booking:active {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
