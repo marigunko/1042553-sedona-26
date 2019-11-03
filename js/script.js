@@ -1,12 +1,11 @@
 var link = document.querySelector(".form-link");
 var popup = document.querySelector(".search-form");
-var close = popup.querySelector(".form-link");
 var form = popup.querySelector("form");
 
-var checkIn = popup.querySelector("[name=checkIn]");
-var checkOut = popup.querySelector("[name=checkOut]");
-var adultsNumber = popup.querySelector("[name=adultsNumber]");
-var childrenNumber = popup.querySelector("[name=childrenNumber]");
+var checkIn = popup.querySelector("[name=check-in-date]");
+var checkOut = popup.querySelector("[name=check-out-date]");
+var adultsNumber = popup.querySelector("[name=adults-number]");
+var childrenNumber = popup.querySelector("[name=children-number]");
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -16,11 +15,6 @@ link.addEventListener("click", function (evt) {
   } else {
     popup.classList.add("hidden-form");
   }
-});
-
-close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.remove("modal-show");
 });
 
 form.addEventListener("submit", function (evt) {
