@@ -26,7 +26,8 @@ form.addEventListener("submit", function (evt) {
 });
 
 window.onload = function() {
-  if (popup.classList.contains("hidden-form")) {
+  if (!popup.classList.contains("hidden-form")) {
+  } else{
     popup.classList.add("hidden-form");
   }
 }

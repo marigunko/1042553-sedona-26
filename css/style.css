@@ -80,7 +80,6 @@ a {
   border: 0;
 
   -webkit-clip-path: inset(100%);
-
           clip-path: inset(100%);
 }
 
@@ -1172,6 +1171,7 @@ a {
 .hotel-name a[href]:active {
   color: rgba(0, 0, 0, 0.3);
 }
+
 .hotel-category {
   padding-bottom: 14px;
 }
@@ -1337,6 +1337,7 @@ a.brown-button-booking:active {
 .social {
   width: 400px;
 }
+
 .social-list {
   display:flex;
   justify-content: center;
@@ -1367,9 +1368,11 @@ a.brown-button-booking:active {
 .social-button:hover {
   background-color: #669ec0;
 }
+
 .social-button:active {
   background-color: #5496bd;
 }
+
 .social-button:active{
   background-color: #5496bd;
 
@@ -1417,7 +1420,6 @@ a.brown-button-booking:active {
   display: block;
 
   -webkit-animation: bounce 0.7s;
-
           animation: bounce 0.7s;
 }
 
@@ -1509,7 +1511,7 @@ a.brown-button-booking:active {
 .search-map p {
   position: absolute;
   z-index: 1;
-  top: 2169px;
+  top: 2170px;
   left: 50%;
 
   margin: 0;
