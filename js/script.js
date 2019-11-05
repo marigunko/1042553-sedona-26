@@ -25,6 +25,13 @@ form.addEventListener("submit", function (evt) {
   }
 });
 
+window.onload = function() {
+  if (popup.classList.contains("hidden-form")) {
+    popup.classList.add("hidden-form");
+  }
+}
+;
+
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
